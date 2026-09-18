@@ -29,7 +29,10 @@ const products = [{ name: "laptop" }, { name: "laptop" }];
 let data = 20;
 data = "hoadv";
 data = true;
-//Union
+//Union | kết hợp 
 let res = 20;
 res = "hoadv";
-// res = true; => error
+// literal: |
+let doSomething;
+// null | undefined
+let value = null;
