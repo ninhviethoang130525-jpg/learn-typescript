@@ -50,3 +50,41 @@ let doSomething: "hoadv" | "an" | "nam";
 // null | undefined
 let value: null | undefined = null;
 
+
+
+// 1. enum 
+enum productRate {
+  low = "thấp",
+  medium = "trung bình",
+  hight = "cao"
+}
+
+// 2.type Product
+type Product = {
+  name: string;
+  price: number;
+  sale: boolean;
+  rate: productRate;
+};
+
+// 3. mảng sản phẩm 
+const listProducts: Product[]=[
+  {
+    name: "laptop",
+    price: 1000,
+    sale: true,
+    rate: productRate.hight
+  },
+  {
+    name: "laptop2",
+    price: 2000,
+    sale: false,
+    rate: productRate.medium
+  },
+  {
+    name: "laptop3",
+    price: 3000,
+    sale: true,
+    rate: productRate.low
+  },
+]
