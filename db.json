@@ -1,13 +1,6 @@
 {
   "pitches": [
     {
-      "id": "1",
-      "name": "Sân bóng số 01",
-      "price": 250000,
-      "location": "Thanh Xuân",
-      "type": "Sân 2"
-    },
-    {
       "id": "2",
       "name": "Sân bóng số 02",
       "price": 250000,
@@ -28,13 +21,27 @@
       "location": "Hà Đông",
       "type": "Sân 7"
     },
-     {
+    {
       "id": "5",
       "name": "Sân bóng số 05",
       "price": 300001,
       "location": "My dinh",
       "type": "Sân 6"
+    },
+    {
+      "id": "6",
+      "name": "sân bóng số 1 ",
+      "price": 300000,
+      "location": "số 10, ngõ 33 phú mỹ",
+      "type": "sân 9"
+    },
+    {
+      "name": "San my dinh",
+      "price": 218173,
+      "location": "san so 1 van canh",
+      "type": "san 7",
+      "completed": false,
+      "id": "T3CjS2G"
     }
-    
   ]
 }
