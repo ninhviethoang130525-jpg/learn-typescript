@@ -1,7 +1,8 @@
 import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import ListPage from "./pages/ListPage";
 import AddPage from "./pages/AddPage";
+import EditPage from "./pages/EditPage";
 
 function App() {
   return (
@@ -26,16 +27,13 @@ function App() {
 
         </div>
       </nav>
+      <Routes>
+        <Route path="/" element={<ListPage/>}></Route>
+        <Route path="/add" element={<AddPage/>}></Route>
+        <Route path="/edit/:id" element={<EditPage/>}></Route>
+      </Routes>
 
-      {/* Form thêm sân */}
-      <div className="max-w-6xl mx-auto mt-10 px-4">
-        <AddPage />
-      </div>
-
-      {/* Danh sách sân */}
-      <div className="max-w-6xl mx-auto mt-10 px-4">
-        <ListPage />
-      </div>
+     
 
       <Toaster />
     </>

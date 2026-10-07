@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 interface Pitch {
   id: string;
   name: string;
@@ -37,6 +38,12 @@ function ListPage() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-semibold mb-6">Danh sách san bong</h1>
+      <Link
+        to="/add"
+        className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+      >
+        Thêm sân
+      </Link>
 
       <div className="overflow-x-auto">
         <table className="w-full border border-gray-300 rounded-lg">
@@ -88,14 +95,21 @@ function ListPage() {
                 <td className="px-4 py-2 border border-gray-300">
                   {pitch.type}
                 </td>
-                <td className="px-4 py-2 border border-gray-300">
-                  <button
-                    onClick={() => handleDelete(pitch.id)}
-                    className="px-4 py-2 border border-gray-300"
-                  >
-                    Xóa
-                  </button>
-                </td>
+                <td>
+  <Link
+    to={`/edit/${pitch.id}`}
+    className="inline-block px-4 py-2 border rounded-lg mr-2"
+  >
+    Sửa
+  </Link>
+
+  <button
+    onClick={() => handleDelete(pitch.id)}
+    className="px-4 py-2 border rounded-lg"
+  >
+    Xóa
+  </button>
+</td>
 
               </tr>
             ))}
